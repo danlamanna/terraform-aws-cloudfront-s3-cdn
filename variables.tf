@@ -46,6 +46,12 @@ variable "aliases" {
   default     = []
 }
 
+variable "custom_error_response" {
+  type        = "list"
+  description = "One or more custom error response elements (multiples allowed)."
+  default     = []
+}
+
 variable "origin_bucket" {
   default = ""
 }

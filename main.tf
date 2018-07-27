@@ -132,6 +132,8 @@ resource "aws_cloudfront_distribution" "default" {
     cloudfront_default_certificate = "${var.acm_certificate_arn == "" ? true : false}"
   }
 
+  custom_error_response = "${var.custom_error_response}"
+
   default_cache_behavior {
     allowed_methods  = "${var.allowed_methods}"
     cached_methods   = "${var.cached_methods}"
